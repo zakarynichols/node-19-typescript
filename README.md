@@ -1,5 +1,11 @@
 # Node v19.0.0 and TypeScript w/Live Reload
 
+A minimal boilerplate example demonstrating Node utilizing ECMAScript modules with TypeScript. Tests are written in ESNext and compiled to CommonJS to satisfy Jest.
+
+Take note of `"type": "module"` in the `package.json`. Jest will _not_ be able to interpret these files in module format. Emit them in a seprate test folder in CommonJS and then run them.
+
+Everything else in the repository utilizes ECMAScript modules during development and production.
+
 # Development
 
 1. Open a terminal
