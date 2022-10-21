@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "CommonJS",
+    "outDir": "./tests",
+    "moduleResolution": "Node"
+  },
+  "include": ["./src/**/*.test.ts"],
+  "exclude": ["node_modules"]
+}

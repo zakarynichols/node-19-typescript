@@ -2,25 +2,30 @@
   "name": "node-19-typescript",
   "type": "module",
   "version": "0.0.1",
-  "description": "Node v19.0.0 with TypeScript minimal example.",
+  "description": "Node v19 with TypeScript using ECMAScript modules and jests test in CommonJS.",
   "keywords": [
     "node",
     "v19.0.0",
     "esnext",
     "module",
     "typescript",
-    "watch"
+    "watch",
+    "jest",
+    "commonjs"
   ],
   "bugs": "https://github.com/zakarynichols/node-19-typescript/issues",
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
-    "watch-dev": "tsc --watch",
+    "test": "rm -rf tests && tsc --project tsconfig.test.json && jest ./tests",
+    "watch-dev": "rm -rf build && tsc --watch",
     "watch-build": "node --watch build/index.js"
   },
   "author": "Zakary Nichols",
   "devDependencies": {
+    "@types/jest": "^29.2.0",
     "@types/node": "^18.11.3",
+    "jest": "^29.2.1",
     "typescript": "^4.8.4"
   }
 }

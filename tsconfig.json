@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "strict": true,
     "module": "ESNext",
+    "strict": true,
     "outDir": "./build",
-    "moduleResolution": "node"
+    "moduleResolution": "NodeNext"
   },
   "include": ["./src"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "**/*__tests__"],
   "watchOptions": {
     "watchFile": "useFsEvents",
     "watchDirectory": "useFsEvents",
