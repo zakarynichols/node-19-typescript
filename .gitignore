@@ -6,3 +6,7 @@ tests
 
 stderr.log
 stdout.log
+
+dist
+
+coverage

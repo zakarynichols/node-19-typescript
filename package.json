@@ -17,9 +17,10 @@
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
-    "test": "rm -rf tests && tsc --project tsconfig.test.json && jest ./tests",
+    "test": "rm -rf tests && tsc --project tsconfig.test.json && node --experimental-vm-modules node_modules/jest/bin/jest.js -c=jest.config.js ./tests",
     "watch-dev": "rm -rf build && tsc --watch",
-    "watch-build": "node --watch build/index.js"
+    "watch-build": "node --watch build/index.js",
+    "build-dist": "tsc --project tsconfig.prod.json"
   },
   "author": "Zakary Nichols",
   "devDependencies": {
