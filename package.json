@@ -2,7 +2,14 @@
   "name": "node-19-typescript",
   "type": "module",
   "version": "0.0.1",
-  "description": "Node v19 with TypeScript using ECMAScript modules and jests test in CommonJS.",
+  "engines": {
+    "node": "19.0.0",
+    "npm": "8.19.2"
+  },
+  "os": [
+    "linux"
+  ],
+  "description": "Node v19 with ECMAScript modules.",
   "keywords": [
     "node",
     "v19.0.0",
@@ -10,17 +17,16 @@
     "module",
     "typescript",
     "watch",
-    "jest",
-    "commonjs"
+    "jest"
   ],
   "bugs": "https://github.com/zakarynichols/node-19-typescript/issues",
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js -c=jest.config.js --watch ./build",
-    "watch-dev": "rm -rf build && tsc --watch",
-    "watch-build": "node --watch build/index.js",
-    "build-dist": "rm -rf dist && tsc --project tsconfig.prod.json"
+    "watch-typescript": "rm -rf build && tsc --watch",
+    "watch-dev": "node --watch build/index.js",
+    "build": "rm -rf dist && tsc --project tsconfig.prod.json"
   },
   "author": "Zakary Nichols",
   "devDependencies": {
