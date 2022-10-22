@@ -1,9 +1,7 @@
 {
+  "extends": "./base.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "strict": true,
-    "outDir": "./build",
-    "moduleResolution": "NodeNext"
+    "outDir": "./build"
   },
   "include": ["./src"],
   "exclude": ["node_modules"],

@@ -2,6 +2,7 @@
 const config = {
   verbose: true,
   collectCoverage: true,
+  roots: ["<rootDir>/build"],
 };
 
 export default config;
